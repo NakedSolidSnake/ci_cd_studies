@@ -15,6 +15,7 @@
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
+		<skipTests>true</skipTests>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -45,7 +46,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
+			<!-- <scope>test</scope> -->
 		</dependency>
 	</dependencies>
 
@@ -61,7 +62,9 @@
 							<artifactId>lombok</artifactId>
 						</exclude>
 					</excludes>
+					<skipTests>${skipTests}</skipTests>
 				</configuration>
+				
 			</plugin>
 		</plugins>
 	</build>
