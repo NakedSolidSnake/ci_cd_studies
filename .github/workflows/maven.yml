@@ -23,4 +23,5 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
-      run: mvn -B package --file ./backend/deploy/pom.xml
+      run: cd ./backend/deploy/
+      run: mvn clean install
