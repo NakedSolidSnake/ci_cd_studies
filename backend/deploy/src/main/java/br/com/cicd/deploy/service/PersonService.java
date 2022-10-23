@@ -32,4 +32,13 @@ public class PersonService {
     public Person insert(Person person) {
         return repository.save(person);
     }
+
+    public void delete(Long id){
+        repository.deleteById(id);
+    }
+
+    public Person update(Long id, Person person) {
+        person.setId(id);
+        return repository.save(person);
+    }
 }
